@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Registration Confirmation</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <h2 class="navbar-brand text text-success">User registered successfully!</h2>
+    </div>
+</nav>
+<!-- display first name, last name and email -->
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>User name</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${webUser.userName}"></td>
+        <td th:text="${webUser.firstName}"></td>
+        <td th:text="${webUser.lastName}"></td>
+        <td th:text="${webUser.email}"></td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+<a class="btn btn-success" th:href="@{/showMyLoginPage}">Login page</a>
+</body>
+</html>
